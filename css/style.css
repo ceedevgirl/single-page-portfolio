@@ -1,0 +1,454 @@
+:root {
+  --color-purple: #755CDE;
+  --color-orange: #F6A560;
+  --color-pink: #F39E9E;
+  --color-red: #EB7565;
+  --color-teal: #61C4B7;
+  --color-plum: #552049;
+  --color-black: #030303;
+  --color-brownish: #7A746E;
+  --color-cream: #FFF7F0;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img{
+  max-width: 100%;
+}
+.container {
+  width: 1200px;
+  max-width: 87%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-purple);
+
+}
+
+.btn-primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: var(--color-brownish);
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+/* Services Section */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin: 0 auto 4rem auto;
+}
+
+@media (max-width:415px) {
+  .services{
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+.service-card {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 182px;
+  
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.service-card .geometric-shape {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: auto;
+  height: auto;
+}
+
+.graphic-design {
+  background-color: var(--color-purple);
+  grid-column: span 2;
+  grid-row: span 2;
+  height: calc(364px + 12px);
+}
+
+.ui-ux {
+  background-color: var(--color-orange);
+}
+
+.apps {
+  background-color: var(--color-pink);
+}
+
+.photography {
+  background-color: var(--color-teal);
+  grid-column: span 2;
+}
+
+.illustrations {
+  background-color: var(--color-red);
+  grid-column: span 2;
+}
+
+.motion-graphics {
+  background-color: var(--color-plum);
+  grid-column: span 2;
+}
+
+/* About Section */
+.about {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profile-pic {
+  margin-bottom: 2rem;
+}
+
+.profile-pic img {
+  width: 300px;
+  height: 300px;
+
+}
+
+.about-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.about-content p {
+  color: var(--color-brownish);
+  margin-bottom: 1.5rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+  margin-bottom: 2rem;
+}
+
+.portfolio h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none; 
+}
+
+.portfolio-grid::-webkit-scrollbar {
+  display: none; 
+}
+
+.portfolio-item {
+  flex: 0 0 auto;
+  width: 270px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.nav-btn:hover {
+  background-color: var(--color-purple);
+}
+
+/* Book Call Section */
+.book-call {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.book-call h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.book-call p {
+  margin-bottom: 1.5rem;
+}
+
+#book-call-btn {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Tablet view */
+@media (min-width: 768px) {
+  /*Hero Section */
+   .hero h1 {
+    font-size: 2.5rem;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin: 0 auto 2rem;
+  }
+  
+  .graphic-design {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .illustrations {
+    grid-column: span 2;
+  }
+  
+  .photography,
+  .motion-graphics {
+    grid-column: span 2;
+   
+  }
+    
+  /*About Section */
+  .about {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2.5rem;
+  }
+  
+  .profile-pic img {
+    width: 364px;
+    height: 364px;
+    margin-left: -80px;
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+  } 
+
+  .about-content p {
+    font-size: 1.25rem;
+  }
+  /* Portfolio Section */
+  .portfolio-grid {
+    scroll-padding: 1rem;
+  } 
+  
+  /* Book Call Section */
+  .book-call {
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+
+  .book-call-content h2 {
+    font-size: 2rem;
+  }
+
+  .book-call-content p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1024px) {
+/* Header & Hero Section */
+header {
+  padding: 2rem 0;
+}
+
+.hero {
+  max-width: 730px;
+    margin: 0 auto 5rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* About Section */
+  .about {
+    margin-bottom: 5rem;
+    gap: 4rem;
+  }
+  
+  .profile-pic img {
+    width: 445px;
+    height: 445px;
+    margin-left: 0;
+  }
+  
+  .about-content {
+    max-width: 540px;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Portfolio Section */
+  .portfolio {
+    margin-bottom: 5rem;
+  }
+  
+  .portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .portfolio-grid {
+    gap: 1rem;
+  }
+  
+  .portfolio-item {
+    width: 400px;
+  }
+  
+  .nav-btn {
+    margin-top: 3rem;
+    width: 64px;
+    height: 64px;
+  }
+  
+  /* Book Call Section */
+  .book-call {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 5rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+  }
+  
+  .book-call-content {
+    max-width: 60%;
+  }
+  
+  .book-call h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .book-call p {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+  }
+  
+}
