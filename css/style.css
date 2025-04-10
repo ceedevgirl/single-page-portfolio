@@ -24,13 +24,15 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+
 img{
   max-width: 100%;
 }
+
 .container {
   width: 1200px;
   max-width: 87%;
-  padding: 1rem;
+  padding: 6px;
   margin: 0 auto;
 }
 
@@ -94,12 +96,12 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 12px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 6rem auto;
 }
 
-@media (max-width:415px) {
-  .services{
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+@media (max-width: 412px) {
+  .services {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
 
